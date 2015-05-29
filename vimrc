@@ -10,7 +10,7 @@ syntax on
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " Let Vundle manage Vundle
