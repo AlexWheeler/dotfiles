@@ -1,9 +1,9 @@
 " Use Vim settings, rather than Vi settings (much better!).
 set nocompatible
- 
-" Make backspace behave in a sane manner.
+
+" make backspace perform correctly 
 set backspace=indent,eol,start
- 
+
 " Switch syntax highlighting on
 syntax on
  
@@ -11,18 +11,20 @@ syntax on
 filetype plugin indent on
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 
 " Let Vundle manage Vundle
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
-Plugin  'tpope/commentary'
-Plugin 'kein/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'christoomey/vim-system-copy'
 Plugin 'mattn/emmet-vim'
+
+call vundle#end()
 
 set clipboard=unnamed
 set tabstop=2

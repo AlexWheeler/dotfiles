@@ -3,6 +3,8 @@ alias gco="git checkout"
 alias gb="git branch"
 alias gco="git checkout"
 alias gr="git remote"
+alias zshrc="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
 export ZSH=$HOME/.oh-my-zsh
 
 export PATH="/usr/local/bin:$PATH"
