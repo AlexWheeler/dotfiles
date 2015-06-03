@@ -9,6 +9,9 @@ syntax on
  
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
+" Enter { <Return> and automatically adds ending brace, indents linea and
+" moves cursor between them (in .js files)
+autocmd FileType javascript inoremap {<CR> {<CR>}<Esc><S-o>
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
