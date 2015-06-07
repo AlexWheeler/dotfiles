@@ -1,8 +1,12 @@
+#git aliases
 alias gs="git status"
 alias gco="git checkout"
 alias gb="git branch"
-alias gco="git checkout"
 alias gr="git remote"
+alias gc="git commit"
+alias gcm="git commit -m"
+
+
 alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
 export ZSH=$HOME/.oh-my-zsh

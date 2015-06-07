@@ -39,7 +39,3 @@ set cursorline
 set showmatch
 set shiftwidth=2
 set relativenumber
-
-"NERDTree
-let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg', '.git/']
