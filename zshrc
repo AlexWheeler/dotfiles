@@ -16,11 +16,14 @@ export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 
+alias pg-start= "postgres -D /usr/local/var/postgres"
+. ~/.nvm/nvm.sh
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="lambda"
+ZSH_THEME="af-magic"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -62,7 +65,7 @@ ZSH_THEME="lambda"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -97,3 +100,6 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
