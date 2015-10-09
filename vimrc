@@ -61,5 +61,7 @@ map <Leader>l :call RunLastSpec()<CR>
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 nnoremap <Leader>e :Explore<CR>
 nnoremap <Leader>rc :!rubocop "%"<CR>
+nnoremap <Leader>g :GoRun<CR>
+nnoremap <Leader>b :GoBuild<CR>
 nmap <leader>v :tabedit $MYVIMRC<CR>
 inoremap jk <esc>
