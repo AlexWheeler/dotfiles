@@ -34,7 +34,9 @@ Plugin 'gaogao1030/vim-skim'
 Plugin 'fatih/vim-go'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'rking/ag.vim'
-
+Plugin 'henrik/vim-ruby-runner'
+Plugin 'tpope/vim-fireplace'
+Plugin 'vim-ruby/vim-ruby'
 call vundle#end()
 
 syntax enable
@@ -53,13 +55,15 @@ set laststatus=2
 set backspace=2
 set background=light
 set fileencoding=utf-8
+"Open man pages in vim with :Man
+runtime! ftplugin/man.vim
 let mapleader = ","
 let g:airline#extensions#tabline#enabled = 0
 let g:tmuxline_powerline_separators = 1
 let g:airline_theme='molokai'
 let g:tslime_always_current_session = 1
 let g:tslime_always_current_window = 1
-"let g:rspec_command = "!zeus rspec {spec}"
+let g:rspec_command = "!zeus rspec {spec}"
 let g:rspec_command = 'call Send_to_Tmux("zeus rspec {spec}\n")'
 "instruct ag to start searching from project root
 let g:ag_working_path_mode="r"
@@ -69,7 +73,9 @@ map <Leader>l :call RunLastSpec()<CR>
 nmap <Leader>rts <Plug>SetTmuxVars
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 nnoremap <Leader>e :Explore<CR>
-nnoremap <Leader>rc :!rubocop "%"<CR>
+"split pane and open file explorer
+nnoremap <Leader>s :split <bar> :Explore<CR>
+"nnoremap <Leader>rc :!rubocop "%"<CR>
 nnoremap <Leader>g :GoRun<CR>
 nnoremap <Leader>b :GoBuild<CR>
 "toggle relativenumber
@@ -78,3 +84,13 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
 "wrap commit message at 72 characters
 autocmd Filetype gitcommit setlocal spell textwidth=72
 autocmd BufWritePre * :%s/\s\+$//e
+
+" air-line
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_symbols.linenr = '☞  '
