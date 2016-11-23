@@ -102,6 +102,8 @@ nnoremap <Leader>b :GoBuild<CR>
 "toggle relativenumber
 nnoremap <silent> <leader>l :exec &number == 0 ? "set number norelativenumber" : "set relativenumber nonumber"<cr>
 nmap <leader>v :tabedit $MYVIMRC<CR>
+"vim-fireplace evaluate outermost s-expression
+nnoremap cpo :Eval<CR>
 "wrap commit message at 72 characters
 autocmd Filetype gitcommit setlocal spell textwidth=72
 autocmd BufWritePre * :%s/\s\+$//e
